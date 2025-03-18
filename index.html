@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Amigo Secreto</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+    <main class="main-content">
+        <header class="header-banner">
+            <h1 class="main-title">Amigo Secreto</h1>
+            <img src="assets/ef11a81b3e532bb53195a8b9ee81f4c9.png" alt="Imagen representativa de amigo secreto">
+        </header>
+        
+        <section class="input-section">
+            <h2 class="section-title">Digite el nombre de sus amigos</h2>
+            <div class="input-wrapper">
+                <input type="text" id="amigo" class="input-name" placeholder="Escribe un nombre" aria-label="Nombre del amigo">
+                <button class="button-add">Añadir</button>
+            </div>
+           
+            <div class="names-container">
+                <ul id="listaAmigos" class="name-list" role="list" aria-labelledby="listaAmigos"></ul>
+            </div>
+
+            <div class="tag-list">
+                <div class="inner" id="amigos-container">
+                    <!-- Existing/initial amigos will be added here dynamically -->
+                </div>
+                <div class="fade"></div>
+            </div>
+
+            <ul id="resultado" class="result-list" aria-live="polite"></ul>
+
+            <div class="button-container">
+                <button class="button-draw" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">
+                    <img src="assets/play_circle_outline.png" alt="Ícono para sortear">
+                    Sortear amigo
+                </button>
+            </div>
+            <img id="drawnImage" src="assets/37a98c70870a1a5d08c3f33327c8af11.png" alt="Amigo sorteado" style="display:none; margin-top: 85px;">
+        </section>
+    </main>
+
+<div id="overlay" class="overlay">
+    <div class="loader"></div> <!-- Ensure this class matches the CSS -->
+
+    </div>
+
+    <div id="resultCard" class="result-card">
+        <h3>🎉 ¡Amigo Sorteado! 🎉</h3>
+        <p id="resultText"></p>
+        <button class="button-close" onclick="closeResult()">Cerrar</button>
+    </div>
+
+    <script src="app.js" defer></script>
+</body>
+</html>
