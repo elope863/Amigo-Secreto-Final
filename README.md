@@ -19,7 +19,7 @@ Amigo Secreto is a web application that allows users to manage a list of friends
 No installation is required. Simply open the `index.html` file in a web browser to use the application.
 
 ## License
-This project is licensed under the MIT License.
+This project is developed by Esteban L.
 
 ##Varcel: https://amigo-secreto-final-eight.vercel.app/
 
